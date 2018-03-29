@@ -23,30 +23,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ваша фамилия" textAlignment="center" minimumFontSize="17" background="textFieldBackground" translatesAutoresizingMaskIntoConstraints="NO" id="147-sR-5hO">
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ваша фамилия" textAlignment="center" minimumFontSize="17" background="textFieldBackground" translatesAutoresizingMaskIntoConstraints="NO" id="147-sR-5hO">
                                 <rect key="frame" x="40" y="308" width="295" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="295" id="7eP-c5-WMa"/>
+                                    <constraint firstAttribute="height" constant="50" id="Ghh-ez-SoK"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="family-name"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ваше имя" textAlignment="center" minimumFontSize="17" background="textFieldBackground" translatesAutoresizingMaskIntoConstraints="NO" id="vWg-9d-BX2">
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ваше имя" textAlignment="center" minimumFontSize="17" background="textFieldBackground" translatesAutoresizingMaskIntoConstraints="NO" id="vWg-9d-BX2">
                                 <rect key="frame" x="40" y="248" width="295" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="295" id="P0x-Lt-jrR"/>
+                                    <constraint firstAttribute="height" constant="50" id="XBn-3b-kiU"/>
+                                </constraints>
                                 <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ваш электронный адрес" textAlignment="center" minimumFontSize="17" background="textFieldBackground" translatesAutoresizingMaskIntoConstraints="NO" id="EfH-jD-eTo">
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ваш электронный адрес" textAlignment="center" minimumFontSize="17" background="textFieldBackground" translatesAutoresizingMaskIntoConstraints="NO" id="EfH-jD-eTo">
                                 <rect key="frame" x="40" y="368" width="295" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ST1-vz-KKI"/>
+                                    <constraint firstAttribute="width" constant="295" id="dYd-It-STL"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="email"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M74-26-p3K">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="userIcon" translatesAutoresizingMaskIntoConstraints="NO" id="qbp-FF-VHD">
+                                <rect key="frame" x="114" y="43" width="146" height="182"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M74-26-p3K">
                                 <rect key="frame" x="40" y="428" width="295" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="295" id="Kxy-z1-TMy"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <state key="normal" title="Далее" backgroundImage="buttonBackground">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -60,12 +74,20 @@
                                     <segue destination="sdi-ci-zl5" kind="show" id="FBV-62-oBE"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="userIcon" translatesAutoresizingMaskIntoConstraints="NO" id="qbp-FF-VHD">
-                                <rect key="frame" x="114" y="43" width="146" height="182"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="M74-26-p3K" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="A9a-CV-OrW"/>
+                            <constraint firstItem="EfH-jD-eTo" firstAttribute="top" secondItem="147-sR-5hO" secondAttribute="bottom" constant="10" id="Cs1-Cq-HUJ"/>
+                            <constraint firstItem="147-sR-5hO" firstAttribute="top" secondItem="vWg-9d-BX2" secondAttribute="bottom" constant="10" id="EW5-OM-6G7"/>
+                            <constraint firstItem="147-sR-5hO" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="GSN-J3-7Ra"/>
+                            <constraint firstItem="vWg-9d-BX2" firstAttribute="top" secondItem="qbp-FF-VHD" secondAttribute="bottom" constant="23" id="GdQ-AO-BPi"/>
+                            <constraint firstItem="vWg-9d-BX2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="b1G-jY-6dZ"/>
+                            <constraint firstItem="147-sR-5hO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mK2-sx-CDJ"/>
+                            <constraint firstItem="qbp-FF-VHD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sBM-3G-9Ad"/>
+                            <constraint firstItem="M74-26-p3K" firstAttribute="top" secondItem="EfH-jD-eTo" secondAttribute="bottom" constant="10" id="uer-5e-iBT"/>
+                            <constraint firstItem="EfH-jD-eTo" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="zo1-Kg-F3s"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
