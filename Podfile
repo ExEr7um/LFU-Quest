@@ -9,6 +9,7 @@ target 'LFU-Quest' do
 
   # Pods for LFU-Quest
 pod 'Hero'
+pod 'Spring'
 
   target 'LFU-QuestTests' do
     inherit! :search_paths
