@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		845D8A4516D12FAA1D1C3EE7 /* Pods_LFU_Quest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23BF10EED3503EFBB27B6AB0 /* Pods_LFU_Quest.framework */; };
 		9404E299206C485400FD4BFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404E298206C485400FD4BFF /* AppDelegate.swift */; };
 		9404E29B206C485400FD4BFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404E29A206C485400FD4BFF /* ViewController.swift */; };
 		9404E29E206C485400FD4BFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9404E29C206C485400FD4BFF /* Main.storyboard */; };
@@ -14,6 +15,10 @@
 		9404E2A3206C485400FD4BFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9404E2A1206C485400FD4BFF /* LaunchScreen.storyboard */; };
 		9404E2AE206C485400FD4BFF /* LFU_QuestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404E2AD206C485400FD4BFF /* LFU_QuestTests.swift */; };
 		9404E2B9206C485400FD4BFF /* LFU_QuestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404E2B8206C485400FD4BFF /* LFU_QuestUITests.swift */; };
+		94D06B172072642F0091F38C /* FirstRegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D06B162072642F0091F38C /* FirstRegViewController.swift */; };
+		94D06B192072649F0091F38C /* SecondRegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D06B182072649F0091F38C /* SecondRegViewController.swift */; };
+		9B409DE6F6D7AC8AC52B438D /* Pods_LFU_QuestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889AE456861E654B26BC8BA6 /* Pods_LFU_QuestTests.framework */; };
+		B3C7D3A239080443ABFEF8EA /* Pods_LFU_QuestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 409FF6151320F73502AA0B1A /* Pods_LFU_QuestUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		23BF10EED3503EFBB27B6AB0 /* Pods_LFU_Quest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LFU_Quest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CBF7CA17507EBB020531CF2 /* Pods-LFU-QuestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFU-QuestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LFU-QuestUITests/Pods-LFU-QuestUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3538840F8686E45AEAB82AE5 /* Pods-LFU-Quest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFU-Quest.release.xcconfig"; path = "Pods/Target Support Files/Pods-LFU-Quest/Pods-LFU-Quest.release.xcconfig"; sourceTree = "<group>"; };
+		409FF6151320F73502AA0B1A /* Pods_LFU_QuestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LFU_QuestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		889AE456861E654B26BC8BA6 /* Pods_LFU_QuestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LFU_QuestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9404E295206C485400FD4BFF /* LFU-Quest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LFU-Quest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9404E298206C485400FD4BFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9404E29A206C485400FD4BFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +57,12 @@
 		9404E2B4206C485400FD4BFF /* LFU-QuestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LFU-QuestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9404E2B8206C485400FD4BFF /* LFU_QuestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFU_QuestUITests.swift; sourceTree = "<group>"; };
 		9404E2BA206C485400FD4BFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94D06B162072642F0091F38C /* FirstRegViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstRegViewController.swift; sourceTree = "<group>"; };
+		94D06B182072649F0091F38C /* SecondRegViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondRegViewController.swift; sourceTree = "<group>"; };
+		AC3F80F145566FCC4E89CC2A /* Pods-LFU-QuestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFU-QuestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LFU-QuestUITests/Pods-LFU-QuestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D91F2636926E8FA49CF8A92C /* Pods-LFU-Quest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFU-Quest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LFU-Quest/Pods-LFU-Quest.debug.xcconfig"; sourceTree = "<group>"; };
+		F6FDD89A0FE50912B8666821 /* Pods-LFU-QuestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFU-QuestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LFU-QuestTests/Pods-LFU-QuestTests.release.xcconfig"; sourceTree = "<group>"; };
+		FEE888215F3253B8467C77AB /* Pods-LFU-QuestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFU-QuestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LFU-QuestTests/Pods-LFU-QuestTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845D8A4516D12FAA1D1C3EE7 /* Pods_LFU_Quest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B409DE6F6D7AC8AC52B438D /* Pods_LFU_QuestTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3C7D3A239080443ABFEF8EA /* Pods_LFU_QuestUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +100,8 @@
 				9404E2AC206C485400FD4BFF /* LFU-QuestTests */,
 				9404E2B7206C485400FD4BFF /* LFU-QuestUITests */,
 				9404E296206C485400FD4BFF /* Products */,
+				DB7ADDCA10390B910CDDBD49 /* Pods */,
+				D80A7A463E86DD5BE88EDA99 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +121,8 @@
 				9404E298206C485400FD4BFF /* AppDelegate.swift */,
 				9404E29A206C485400FD4BFF /* ViewController.swift */,
 				9404E29C206C485400FD4BFF /* Main.storyboard */,
+				94D06B162072642F0091F38C /* FirstRegViewController.swift */,
+				94D06B182072649F0091F38C /* SecondRegViewController.swift */,
 				9404E29F206C485400FD4BFF /* Assets.xcassets */,
 				9404E2A1206C485400FD4BFF /* LaunchScreen.storyboard */,
 				9404E2A4206C485400FD4BFF /* Info.plist */,
@@ -125,6 +148,29 @@
 			path = "LFU-QuestUITests";
 			sourceTree = "<group>";
 		};
+		D80A7A463E86DD5BE88EDA99 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23BF10EED3503EFBB27B6AB0 /* Pods_LFU_Quest.framework */,
+				889AE456861E654B26BC8BA6 /* Pods_LFU_QuestTests.framework */,
+				409FF6151320F73502AA0B1A /* Pods_LFU_QuestUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB7ADDCA10390B910CDDBD49 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D91F2636926E8FA49CF8A92C /* Pods-LFU-Quest.debug.xcconfig */,
+				3538840F8686E45AEAB82AE5 /* Pods-LFU-Quest.release.xcconfig */,
+				FEE888215F3253B8467C77AB /* Pods-LFU-QuestTests.debug.xcconfig */,
+				F6FDD89A0FE50912B8666821 /* Pods-LFU-QuestTests.release.xcconfig */,
+				2CBF7CA17507EBB020531CF2 /* Pods-LFU-QuestUITests.debug.xcconfig */,
+				AC3F80F145566FCC4E89CC2A /* Pods-LFU-QuestUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +178,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9404E2BD206C485400FD4BFF /* Build configuration list for PBXNativeTarget "LFU-Quest" */;
 			buildPhases = (
+				6FA22B1BDEE75D218DD68C88 /* [CP] Check Pods Manifest.lock */,
 				9404E291206C485400FD4BFF /* Sources */,
 				9404E292206C485400FD4BFF /* Frameworks */,
 				9404E293206C485400FD4BFF /* Resources */,
+				A0AAB7B58C4B2C412DBD407A /* [CP] Embed Pods Frameworks */,
+				D1AC5B4E980305B627BF0CB9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +198,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9404E2C0206C485400FD4BFF /* Build configuration list for PBXNativeTarget "LFU-QuestTests" */;
 			buildPhases = (
+				5C0D5E52FE70574165CF9932 /* [CP] Check Pods Manifest.lock */,
 				9404E2A5206C485400FD4BFF /* Sources */,
 				9404E2A6206C485400FD4BFF /* Frameworks */,
 				9404E2A7206C485400FD4BFF /* Resources */,
+				2EDE617DA59711B2736E7E61 /* [CP] Embed Pods Frameworks */,
+				2739780CECD8C42727DD3DB6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +219,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9404E2C3206C485400FD4BFF /* Build configuration list for PBXNativeTarget "LFU-QuestUITests" */;
 			buildPhases = (
+				6C4CE6BE444A7982AE4089D6 /* [CP] Check Pods Manifest.lock */,
 				9404E2B0206C485400FD4BFF /* Sources */,
 				9404E2B1206C485400FD4BFF /* Frameworks */,
 				9404E2B2206C485400FD4BFF /* Resources */,
+				35D3E13DA7BBFF23AE3452DB /* [CP] Embed Pods Frameworks */,
+				DFD3C697CA7691DDDAE8A216 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,13 +309,165 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2739780CECD8C42727DD3DB6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LFU-QuestTests/Pods-LFU-QuestTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2EDE617DA59711B2736E7E61 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LFU-QuestTests/Pods-LFU-QuestTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		35D3E13DA7BBFF23AE3452DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LFU-QuestUITests/Pods-LFU-QuestUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C0D5E52FE70574165CF9932 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LFU-QuestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C4CE6BE444A7982AE4089D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LFU-QuestUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6FA22B1BDEE75D218DD68C88 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LFU-Quest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0AAB7B58C4B2C412DBD407A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LFU-Quest/Pods-LFU-Quest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LFU-Quest/Pods-LFU-Quest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1AC5B4E980305B627BF0CB9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LFU-Quest/Pods-LFU-Quest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFD3C697CA7691DDDAE8A216 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LFU-QuestUITests/Pods-LFU-QuestUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9404E291206C485400FD4BFF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9404E29B206C485400FD4BFF /* ViewController.swift in Sources */,
+				94D06B192072649F0091F38C /* SecondRegViewController.swift in Sources */,
 				9404E299206C485400FD4BFF /* AppDelegate.swift in Sources */,
+				94D06B172072642F0091F38C /* FirstRegViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +635,7 @@
 		};
 		9404E2BE206C485400FD4BFF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D91F2636926E8FA49CF8A92C /* Pods-LFU-Quest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -443,6 +651,7 @@
 		};
 		9404E2BF206C485400FD4BFF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3538840F8686E45AEAB82AE5 /* Pods-LFU-Quest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -458,6 +667,7 @@
 		};
 		9404E2C1206C485400FD4BFF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEE888215F3253B8467C77AB /* Pods-LFU-QuestTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -475,6 +685,7 @@
 		};
 		9404E2C2206C485400FD4BFF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6FDD89A0FE50912B8666821 /* Pods-LFU-QuestTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -492,6 +703,7 @@
 		};
 		9404E2C4206C485400FD4BFF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CBF7CA17507EBB020531CF2 /* Pods-LFU-QuestUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -508,6 +720,7 @@
 		};
 		9404E2C5206C485400FD4BFF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC3F80F145566FCC4E89CC2A /* Pods-LFU-QuestUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
