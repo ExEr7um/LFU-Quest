@@ -13,7 +13,7 @@
         <!--1 часть регистрации-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="1 часть регистрации" id="BYZ-38-t0r" customClass="ViewController" customModule="LFU_Quest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="1 часть регистрации" id="BYZ-38-t0r" customClass="FirstRegViewController" customModule="LFU_Quest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,7 +24,7 @@
                                     <constraint firstAttribute="width" constant="295" id="7eP-c5-WMa"/>
                                     <constraint firstAttribute="height" constant="50" id="Ghh-ez-SoK"/>
                                 </constraints>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="family-name"/>
                                 <userDefinedRuntimeAttributes>
@@ -47,7 +47,7 @@
                                     <constraint firstAttribute="width" constant="295" id="P0x-Lt-jrR"/>
                                     <constraint firstAttribute="height" constant="50" id="XBn-3b-kiU"/>
                                 </constraints>
-                                <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
                                 <userDefinedRuntimeAttributes>
@@ -73,7 +73,7 @@
                                     <constraint firstAttribute="height" constant="50" id="ST1-vz-KKI"/>
                                     <constraint firstAttribute="width" constant="295" id="dYd-It-STL"/>
                                 </constraints>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="email"/>
                                 <userDefinedRuntimeAttributes>
@@ -143,6 +143,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="nextButtonView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RIy-gH-Qzy"/>
                                     <segue destination="sdi-ci-zl5" kind="presentation" id="FBV-62-oBE"/>
                                 </connections>
                             </button>
@@ -165,6 +166,11 @@
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="emailTextFieldView" destination="EfH-jD-eTo" id="2je-Du-RBC"/>
+                        <outlet property="nameTextFieldView" destination="vWg-9d-BX2" id="Oqe-0f-DZg"/>
+                        <outlet property="surnameTextFieldView" destination="147-sR-5hO" id="6tt-7C-GNO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -173,7 +179,7 @@
         <!--2 часть регистрации-->
         <scene sceneID="YKQ-UV-Bpa">
             <objects>
-                <viewController title="2 часть регистрации" id="sdi-ci-zl5" sceneMemberID="viewController">
+                <viewController title="2 часть регистрации" id="sdi-ci-zl5" customClass="SecondRegViewController" customModule="LFU_Quest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P1O-rO-zSI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -210,6 +216,9 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="regButton"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="registerButtonView:" destination="sdi-ci-zl5" eventType="touchUpInside" id="MRp-nS-w6r"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Придумайте пароль" textAlignment="center" minimumFontSize="17" background="textFieldBackground" translatesAutoresizingMaskIntoConstraints="NO" id="F5O-Pv-L4z">
                                 <rect key="frame" x="40" y="283.5" width="295" height="50"/>
@@ -246,10 +255,14 @@
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="passwordTextFieldView" destination="F5O-Pv-L4z" id="zmC-6R-eje"/>
+                        <outlet property="repeatPasswordTextFieldView" destination="p2h-sl-oY9" id="1m6-Zr-aZr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cXw-Nh-QnN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1388" y="32"/>
+            <point key="canvasLocation" x="1433" y="32"/>
         </scene>
     </scenes>
     <resources>
