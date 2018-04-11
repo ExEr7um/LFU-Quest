@@ -15,6 +15,7 @@
 		9404E2A3206C485400FD4BFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9404E2A1206C485400FD4BFF /* LaunchScreen.storyboard */; };
 		9404E2AE206C485400FD4BFF /* LFU_QuestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404E2AD206C485400FD4BFF /* LFU_QuestTests.swift */; };
 		9404E2B9206C485400FD4BFF /* LFU_QuestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404E2B8206C485400FD4BFF /* LFU_QuestUITests.swift */; };
+		94AF5603207C204F0032D562 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF5602207C204F0032D562 /* MainPageViewController.swift */; };
 		94D06B172072642F0091F38C /* FirstRegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D06B162072642F0091F38C /* FirstRegViewController.swift */; };
 		94D06B192072649F0091F38C /* SecondRegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D06B182072649F0091F38C /* SecondRegViewController.swift */; };
 		9B409DE6F6D7AC8AC52B438D /* Pods_LFU_QuestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889AE456861E654B26BC8BA6 /* Pods_LFU_QuestTests.framework */; };
@@ -57,6 +58,7 @@
 		9404E2B4206C485400FD4BFF /* LFU-QuestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "LFU-QuestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9404E2B8206C485400FD4BFF /* LFU_QuestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFU_QuestUITests.swift; sourceTree = "<group>"; };
 		9404E2BA206C485400FD4BFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94AF5602207C204F0032D562 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		94D06B162072642F0091F38C /* FirstRegViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstRegViewController.swift; sourceTree = "<group>"; };
 		94D06B182072649F0091F38C /* SecondRegViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondRegViewController.swift; sourceTree = "<group>"; };
 		AC3F80F145566FCC4E89CC2A /* Pods-LFU-QuestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFU-QuestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LFU-QuestUITests/Pods-LFU-QuestUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				9404E298206C485400FD4BFF /* AppDelegate.swift */,
 				9404E29A206C485400FD4BFF /* ViewController.swift */,
 				9404E29C206C485400FD4BFF /* Main.storyboard */,
+				94AF5602207C204F0032D562 /* MainPageViewController.swift */,
 				94D06B162072642F0091F38C /* FirstRegViewController.swift */,
 				94D06B182072649F0091F38C /* SecondRegViewController.swift */,
 				9404E29F206C485400FD4BFF /* Assets.xcassets */,
@@ -466,6 +469,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94AF5603207C204F0032D562 /* MainPageViewController.swift in Sources */,
 				9404E29B206C485400FD4BFF /* ViewController.swift in Sources */,
 				94D06B192072649F0091F38C /* SecondRegViewController.swift in Sources */,
 				9404E299206C485400FD4BFF /* AppDelegate.swift in Sources */,

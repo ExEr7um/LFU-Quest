@@ -94,7 +94,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userIcon" translatesAutoresizingMaskIntoConstraints="NO" id="qbp-FF-VHD" customClass="SpringImageView" customModule="Spring">
-                                <rect key="frame" x="116" y="57.5" width="142" height="178"/>
+                                <rect key="frame" x="116" y="55.5" width="142" height="178"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="delay">
                                         <real key="value" value="0.0"/>
@@ -154,7 +154,7 @@
                             <constraint firstItem="EfH-jD-eTo" firstAttribute="top" secondItem="147-sR-5hO" secondAttribute="bottom" constant="10" id="Cs1-Cq-HUJ"/>
                             <constraint firstItem="147-sR-5hO" firstAttribute="top" secondItem="vWg-9d-BX2" secondAttribute="bottom" constant="10" id="EW5-OM-6G7"/>
                             <constraint firstItem="147-sR-5hO" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="GSN-J3-7Ra"/>
-                            <constraint firstItem="vWg-9d-BX2" firstAttribute="top" secondItem="qbp-FF-VHD" secondAttribute="bottom" constant="23" id="GdQ-AO-BPi"/>
+                            <constraint firstItem="vWg-9d-BX2" firstAttribute="top" secondItem="qbp-FF-VHD" secondAttribute="bottom" constant="25" id="GdQ-AO-BPi"/>
                             <constraint firstItem="vWg-9d-BX2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="b1G-jY-6dZ"/>
                             <constraint firstItem="147-sR-5hO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mK2-sx-CDJ"/>
                             <constraint firstItem="qbp-FF-VHD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sBM-3G-9Ad"/>
@@ -218,6 +218,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="registerButtonView:" destination="sdi-ci-zl5" eventType="touchUpInside" id="MRp-nS-w6r"/>
+                                    <segue destination="MWH-3B-WRI" kind="presentation" id="Bvc-Xv-Xw1"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Придумайте пароль" textAlignment="center" minimumFontSize="17" background="textFieldBackground" translatesAutoresizingMaskIntoConstraints="NO" id="F5O-Pv-L4z">
@@ -263,6 +264,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cXw-Nh-QnN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1433" y="32"/>
+        </scene>
+        <!--Главная-->
+        <scene sceneID="e4U-sF-dXw">
+            <objects>
+                <viewController title="Главная" id="MWH-3B-WRI" customClass="MainPageViewController" customModule="LFU_Quest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tHz-Ve-UHj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="v9S-e8-nCI"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qFt-e4-aZ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2177" y="32"/>
         </scene>
     </scenes>
     <resources>
