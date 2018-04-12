@@ -9,6 +9,7 @@
 import UIKit
 import Hero
 import Spring
+import Firebase
 
 class MainPageViewController: UIViewController {
 
@@ -23,9 +24,7 @@ class MainPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
     }
-
 
 }

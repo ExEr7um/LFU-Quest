@@ -10,6 +10,8 @@ target 'LFU-Quest' do
   # Pods for LFU-Quest
 pod 'Hero'
 pod 'Spring'
+pod 'Firebase/Core'
+pod 'Firebase/Auth'
 
   target 'LFU-QuestTests' do
     inherit! :search_paths
