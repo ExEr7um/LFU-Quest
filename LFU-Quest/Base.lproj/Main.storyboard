@@ -217,8 +217,8 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="regButton"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="registerButtonView:" destination="sdi-ci-zl5" eventType="touchUpInside" id="MRp-nS-w6r"/>
-                                    <segue destination="MWH-3B-WRI" kind="presentation" id="F8r-go-MFW"/>
+                                    <action selector="registerButton:" destination="sdi-ci-zl5" eventType="touchUpInside" id="Cx9-SX-bci"/>
+                                    <segue destination="MWH-3B-WRI" kind="presentation" id="lcM-A0-Yhm"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Придумайте пароль" textAlignment="center" minimumFontSize="17" background="textFieldBackground" translatesAutoresizingMaskIntoConstraints="NO" id="F5O-Pv-L4z">
@@ -257,8 +257,8 @@
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
                     </userDefinedRuntimeAttributes>
                     <connections>
-                        <outlet property="passwordTextFieldView" destination="F5O-Pv-L4z" id="zmC-6R-eje"/>
-                        <outlet property="repeatPasswordTextFieldView" destination="p2h-sl-oY9" id="1m6-Zr-aZr"/>
+                        <outlet property="passwordTextField" destination="F5O-Pv-L4z" id="kA5-Sh-n3k"/>
+                        <outlet property="repeatPasswordTextField" destination="p2h-sl-oY9" id="QV7-Qr-Rat"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cXw-Nh-QnN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -385,7 +385,6 @@
         <!--Настройки-->
         <scene sceneID="EaA-bM-W9P">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ble-Qw-F9q" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController title="Настройки" id="4XP-Yc-3Xj" customClass="SettingsTableViewController" customModule="LFU_Quest" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fZH-oF-neF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -492,6 +491,7 @@
                         </connections>
                     </tableView>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ble-Qw-F9q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2177" y="734"/>
         </scene>
