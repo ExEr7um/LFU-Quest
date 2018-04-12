@@ -11,7 +11,6 @@ import Hero
 import Spring
 
 class FirstRegViewController: UIViewController {
-
     @IBOutlet weak var nameTextFieldView: SpringTextField!
     @IBOutlet weak var surnameTextFieldView: SpringTextField!
     @IBOutlet weak var emailTextFieldView: SpringTextField!
