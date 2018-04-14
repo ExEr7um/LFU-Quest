@@ -49,6 +49,9 @@ class LoginPageViewController: UIViewController {
                 self.dismiss(animated: false, completion: nil)
             } else {
                 print("Error loging in: \(error!.localizedDescription)")
+                let alert = UIAlertController(title: "Не все поля заполнены!", message: "Ошибка: \(error!.localizedDescription)", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
             }
         }
     }

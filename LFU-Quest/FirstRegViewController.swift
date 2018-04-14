@@ -94,6 +94,9 @@ class FirstRegViewController: UIViewController {
                     self.nameTextFieldView.text! = ""
                     self.emailTextFieldView.text! = ""
                     self.passwordTextFieldView.text! = ""
+                    let alert = UIAlertController(title: "Ошибка создания пользователя!", message: "Ошибка: \(error!.localizedDescription)", preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
                 }
             }
         }
