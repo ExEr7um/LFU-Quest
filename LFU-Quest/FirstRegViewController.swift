@@ -28,9 +28,6 @@ class FirstRegViewController: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if let user = Auth.auth().currentUser {
-//            self.performSegue(withIdentifier: "toHomePage", sender: self)
-        }
     }
     func clearFieldChecker() {
         let userName: String = nameTextFieldView.text!

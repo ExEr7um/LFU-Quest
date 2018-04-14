@@ -17,8 +17,8 @@
 		9404E2B9206C485400FD4BFF /* LFU_QuestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9404E2B8206C485400FD4BFF /* LFU_QuestUITests.swift */; };
 		948EB643207F7D99005A68F5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 948EB642207F7D99005A68F5 /* GoogleService-Info.plist */; };
 		948EB645207F8A7B005A68F5 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948EB644207F8A7B005A68F5 /* LoginPageViewController.swift */; };
+		9494130F20824B3A003B069F /* SettingsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9494130E20824B3A003B069F /* SettingsPageViewController.swift */; };
 		94AF5603207C204F0032D562 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF5602207C204F0032D562 /* MainPageViewController.swift */; };
-		94B6AE4E207F4A8100B977E1 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B6AE4D207F4A8100B977E1 /* SettingsTableViewController.swift */; };
 		94D06B172072642F0091F38C /* FirstRegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D06B162072642F0091F38C /* FirstRegViewController.swift */; };
 		9B409DE6F6D7AC8AC52B438D /* Pods_LFU_QuestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889AE456861E654B26BC8BA6 /* Pods_LFU_QuestTests.framework */; };
 		B3C7D3A239080443ABFEF8EA /* Pods_LFU_QuestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 409FF6151320F73502AA0B1A /* Pods_LFU_QuestUITests.framework */; };
@@ -62,8 +62,8 @@
 		9404E2BA206C485400FD4BFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		948EB642207F7D99005A68F5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		948EB644207F8A7B005A68F5 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
+		9494130E20824B3A003B069F /* SettingsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPageViewController.swift; sourceTree = "<group>"; };
 		94AF5602207C204F0032D562 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
-		94B6AE4D207F4A8100B977E1 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		94D06B162072642F0091F38C /* FirstRegViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstRegViewController.swift; sourceTree = "<group>"; };
 		AC3F80F145566FCC4E89CC2A /* Pods-LFU-QuestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFU-QuestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LFU-QuestUITests/Pods-LFU-QuestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D91F2636926E8FA49CF8A92C /* Pods-LFU-Quest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFU-Quest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LFU-Quest/Pods-LFU-Quest.debug.xcconfig"; sourceTree = "<group>"; };
@@ -127,8 +127,8 @@
 				9404E298206C485400FD4BFF /* AppDelegate.swift */,
 				9404E29A206C485400FD4BFF /* ViewController.swift */,
 				9404E29C206C485400FD4BFF /* Main.storyboard */,
+				9494130E20824B3A003B069F /* SettingsPageViewController.swift */,
 				948EB644207F8A7B005A68F5 /* LoginPageViewController.swift */,
-				94B6AE4D207F4A8100B977E1 /* SettingsTableViewController.swift */,
 				94AF5602207C204F0032D562 /* MainPageViewController.swift */,
 				94D06B162072642F0091F38C /* FirstRegViewController.swift */,
 				9404E29F206C485400FD4BFF /* Assets.xcassets */,
@@ -482,9 +482,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9494130F20824B3A003B069F /* SettingsPageViewController.swift in Sources */,
 				94AF5603207C204F0032D562 /* MainPageViewController.swift in Sources */,
 				9404E29B206C485400FD4BFF /* ViewController.swift in Sources */,
-				94B6AE4E207F4A8100B977E1 /* SettingsTableViewController.swift in Sources */,
 				948EB645207F8A7B005A68F5 /* LoginPageViewController.swift in Sources */,
 				9404E299206C485400FD4BFF /* AppDelegate.swift in Sources */,
 				94D06B172072642F0091F38C /* FirstRegViewController.swift in Sources */,
