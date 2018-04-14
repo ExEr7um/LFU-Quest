@@ -124,7 +124,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="nextButtonView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RIy-gH-Qzy"/>
-                                    <segue destination="MWH-3B-WRI" kind="presentation" identifier="" id="s8q-Ra-mSN"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Придумайте пароль" textAlignment="center" minimumFontSize="17" background="textFieldBackground" translatesAutoresizingMaskIntoConstraints="NO" id="dG7-bE-d3N" customClass="SpringTextField" customModule="Spring">
@@ -210,6 +209,7 @@
                         <outlet property="emailTextFieldView" destination="EfH-jD-eTo" id="2je-Du-RBC"/>
                         <outlet property="nameTextFieldView" destination="vWg-9d-BX2" id="Oqe-0f-DZg"/>
                         <outlet property="passwordTextFieldView" destination="dG7-bE-d3N" id="G49-ds-y0W"/>
+                        <segue destination="MWH-3B-WRI" kind="presentation" identifier="regToHome" id="ael-DX-7yF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -423,7 +423,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="loginButton:" destination="cwp-uu-FYh" eventType="touchUpInside" id="t3K-pV-7UM"/>
-                                    <segue destination="MWH-3B-WRI" kind="presentation" id="Ibw-t9-fpV"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userIcon" translatesAutoresizingMaskIntoConstraints="NO" id="EB1-3S-4ih" customClass="SpringImageView" customModule="Spring">
@@ -470,6 +469,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="vDX-D1-Qrg" id="kU5-GT-mkq"/>
                         <outlet property="passwordTextField" destination="xbn-br-fXT" id="VJH-eH-1gE"/>
+                        <segue destination="MWH-3B-WRI" kind="presentation" identifier="loginToHome" id="4Kx-fK-em5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lqW-iz-ZEM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -664,6 +664,6 @@
         <image name="userIcon" width="142" height="178"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ibw-t9-fpV"/>
+        <segue reference="4Kx-fK-em5"/>
     </inferredMetricsTieBreakers>
 </document>
