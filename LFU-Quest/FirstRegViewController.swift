@@ -86,6 +86,13 @@ class FirstRegViewController: UIViewController {
             Auth.auth().createUser(withEmail: emailTextFieldView.text!, password: passwordTextFieldView.text!) { user, error in
                 if error == nil && user != nil {
                     print("User created!")
+                    let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+                    changeRequest?.displayName = self.nameTextFieldView.text!
+                    changeRequest?.commitChanges { error in
+                        if error == nil {
+                            print("User display name changed!")
+                        }
+                    }
                 } else {
                     print("Error creating user: \(error!.localizedDescription)")
                     self.nameTextFieldView.text! = ""
