@@ -15,6 +15,26 @@ class SettingsPageViewController: UIViewController {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
+    @IBAction func nameChangeButton(_ sender: Any) {
+        let alert = UIAlertController(title: "Изменение имени", message: "Введите новое имя!", preferredStyle: .alert)
+        alert.addTextField { (textField) in
+            textField.text = ""
+        }
+        alert.addAction(UIAlertAction(title: "Изменить", style: .default, handler: { [weak alert] (_) in
+            let textField = alert?.textFields![0]
+            let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+            changeRequest?.displayName = textField?.text!
+            changeRequest?.commitChanges { error in
+                if error == nil {
+                    print("User display name changed!")
+                } else {
+                    print(error!.localizedDescription)
+                }
+            }
+
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
     @IBAction func passwordChangeButton(_ sender: Any) {
 //        let alert = UIAlertController(title: "Изменение пароля", message: "Введите новый пароль!", preferredStyle: .alert)
 //        alert.addTextField { (textField) in
