@@ -256,7 +256,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0930;
-				ORGANIZATIONNAME = "Dream Sites";
+				ORGANIZATIONNAME = "ExErtum's inc.";
 				TargetAttributes = {
 					9404E294206C485400FD4BFF = {
 						CreatedOnToolsVersion = 9.2;
@@ -666,7 +666,7 @@
 				DEVELOPMENT_TEAM = 2LUN3D87PE;
 				INFOPLIST_FILE = "LFU-Quest/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "dream-sites.LFU-Quest";
+				PRODUCT_BUNDLE_IDENTIFIER = "exertums-inc.LFU-Quest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -682,7 +682,7 @@
 				DEVELOPMENT_TEAM = 2LUN3D87PE;
 				INFOPLIST_FILE = "LFU-Quest/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "dream-sites.LFU-Quest";
+				PRODUCT_BUNDLE_IDENTIFIER = "exertums-inc.LFU-Quest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

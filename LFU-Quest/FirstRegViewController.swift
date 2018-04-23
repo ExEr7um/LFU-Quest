@@ -3,7 +3,7 @@
 //  LFU-Quest
 //
 //  Created by Василий Кузин on 02.04.2018.
-//  Copyright © 2018 Dream Sites. All rights reserved.
+//  Copyright © 2018 ExErtum's inc. All rights reserved.
 //
 
 import UIKit
