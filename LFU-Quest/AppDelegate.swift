@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             
             if user != nil {
-                let controller = storyboard.instantiateViewController(withIdentifier: "MainPageViewController") as! MainPageViewController
+                let controller = storyboard.instantiateViewController(withIdentifier: "MainPageTabBarController") as! MainPageTabBarController
                 self.window?.rootViewController = controller
                 self.window?.makeKeyAndVisible()
             } else {
