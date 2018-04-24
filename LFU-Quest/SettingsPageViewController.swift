@@ -27,6 +27,8 @@ class SettingsPageViewController: UIViewController {
             changeRequest?.commitChanges { error in
                 if error == nil {
                     print("User display name changed!")
+                    let userName = Auth.auth().currentUser?.displayName
+                    self.nameLabel.text! = userName!
                 } else {
                     print(error!.localizedDescription)
                 }
