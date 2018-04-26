@@ -19,7 +19,7 @@
 		948EB643207F7D99005A68F5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 948EB642207F7D99005A68F5 /* GoogleService-Info.plist */; };
 		948EB645207F8A7B005A68F5 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948EB644207F8A7B005A68F5 /* LoginPageViewController.swift */; };
 		9494130F20824B3A003B069F /* SettingsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9494130E20824B3A003B069F /* SettingsPageViewController.swift */; };
-		94BC429920838F2B00679B22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94BC429820838F2B00679B22 /* Assets.xcassets */; };
+		949581902091401E00071A67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9495818F2091401E00071A67 /* Assets.xcassets */; };
 		94D06B172072642F0091F38C /* FirstRegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D06B162072642F0091F38C /* FirstRegViewController.swift */; };
 		9B409DE6F6D7AC8AC52B438D /* Pods_LFU_QuestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889AE456861E654B26BC8BA6 /* Pods_LFU_QuestTests.framework */; };
 		B3C7D3A239080443ABFEF8EA /* Pods_LFU_QuestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 409FF6151320F73502AA0B1A /* Pods_LFU_QuestUITests.framework */; };
@@ -65,7 +65,7 @@
 		948EB642207F7D99005A68F5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		948EB644207F8A7B005A68F5 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		9494130E20824B3A003B069F /* SettingsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPageViewController.swift; sourceTree = "<group>"; };
-		94BC429820838F2B00679B22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9495818F2091401E00071A67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94D06B162072642F0091F38C /* FirstRegViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstRegViewController.swift; sourceTree = "<group>"; };
 		AC3F80F145566FCC4E89CC2A /* Pods-LFU-QuestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFU-QuestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LFU-QuestUITests/Pods-LFU-QuestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D91F2636926E8FA49CF8A92C /* Pods-LFU-Quest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LFU-Quest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LFU-Quest/Pods-LFU-Quest.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,7 +134,7 @@
 				9494130E20824B3A003B069F /* SettingsPageViewController.swift */,
 				948EB644207F8A7B005A68F5 /* LoginPageViewController.swift */,
 				94D06B162072642F0091F38C /* FirstRegViewController.swift */,
-				94BC429820838F2B00679B22 /* Assets.xcassets */,
+				9495818F2091401E00071A67 /* Assets.xcassets */,
 				9404E2A1206C485400FD4BFF /* LaunchScreen.storyboard */,
 				9404E2A4206C485400FD4BFF /* Info.plist */,
 				948EB642207F7D99005A68F5 /* GoogleService-Info.plist */,
@@ -301,7 +301,7 @@
 			files = (
 				9404E2A3206C485400FD4BFF /* LaunchScreen.storyboard in Resources */,
 				948EB643207F7D99005A68F5 /* GoogleService-Info.plist in Resources */,
-				94BC429920838F2B00679B22 /* Assets.xcassets in Resources */,
+				949581902091401E00071A67 /* Assets.xcassets in Resources */,
 				9404E29E206C485400FD4BFF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
