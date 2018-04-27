@@ -24,6 +24,9 @@ class LoginPageViewController: UIViewController {
         super.viewDidLoad()
         
     }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     func clearFieldChecker() {
         let userEmail: String = emailTextField.text!
         let userPassword: String = passwordTextField.text!

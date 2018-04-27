@@ -11,7 +11,7 @@ import Hero
 import Spring
 import Firebase
 
-class FirstRegViewController: UIViewController {
+class FirstRegViewController: UIViewController, UITextFieldDelegate {
     // MARK: Outlets
     @IBOutlet weak var nameTextFieldView: SpringTextField!
     @IBOutlet weak var emailTextFieldView: SpringTextField!
@@ -26,8 +26,8 @@ class FirstRegViewController: UIViewController {
         super.viewDidLoad()
 
     }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     func clearFieldChecker() {
         let userName: String = nameTextFieldView.text!
