@@ -15,6 +15,10 @@ class SettingsPageViewController: UIViewController {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var classPickerLabel: UILabel!
+    @IBAction func classPickerButton(_ sender: Any) {
+        
+    }
     @IBAction func nameChangeButton(_ sender: Any) {
         let alert = UIAlertController(title: "Изменение имени", message: "Введите новое имя!", preferredStyle: .alert)
         alert.addTextField { (textField) in
@@ -38,22 +42,6 @@ class SettingsPageViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     @IBAction func passwordChangeButton(_ sender: Any) {
-//        let alert = UIAlertController(title: "Изменение пароля", message: "Введите новый пароль!", preferredStyle: .alert)
-//        alert.addTextField { (textField) in
-//            textField.text = ""
-//        }
-//        alert.addAction(UIAlertAction(title: "Изменить", style: .default, handler: { [weak alert] (_) in
-//            let textField = alert?.textFields![0]
-//            Auth.auth().currentUser?.updatePassword(to: (textField?.text!)!) { (error) in
-//                if error == nil {
-//                    print("Password updated!")
-//                } else {
-//                    print(error?.localizedDescription)
-//                }
-//            }
-//
-//        }))
-//        self.present(alert, animated: true, completion: nil)
     }
     @IBAction func logoutButton(_ sender: Any) {
         try! Auth.auth().signOut()

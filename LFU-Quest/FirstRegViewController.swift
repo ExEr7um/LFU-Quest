@@ -16,6 +16,12 @@ class FirstRegViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var nameTextFieldView: SpringTextField!
     @IBOutlet weak var emailTextFieldView: SpringTextField!
     @IBOutlet weak var passwordTextFieldView: SpringTextField!
+    @IBOutlet weak var nameToEmailConstraint: NSLayoutConstraint!
+    @IBOutlet weak var nameErrorLabel: UILabel!
+    @IBOutlet weak var emailToPasswordConstraint: NSLayoutConstraint!
+    @IBOutlet weak var emailErrorLabel: UILabel!
+    @IBOutlet weak var passwordToButtonConstraint: NSLayoutConstraint!
+    @IBOutlet weak var passwordErrorLabel: UILabel!
     @IBAction func nextButtonView(_ sender: SpringButton) {
         clearFieldChecker()
         createAccount()
@@ -24,7 +30,9 @@ class FirstRegViewController: UIViewController, UITextFieldDelegate {
     // MARK: Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        nameErrorLabel.alpha = 0
+        passwordErrorLabel.alpha = 0
+        emailErrorLabel.alpha = 0
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
@@ -45,40 +53,35 @@ class FirstRegViewController: UIViewController, UITextFieldDelegate {
         if userEmail == "" {
             emailFieldChecker = false
         }
-        if nameFieldChecker == false && passwordFieldChecker == false && emailFieldChecker == false {
-            let alert = UIAlertController(title: "Все поля не заполнены!", message: "Пожалуйста, заполните поля Ваше имя, Ваш пароль, Ваш электронный адрес", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+        if nameFieldChecker == false {
+            self.nameTextFieldView.background = #imageLiteral(resourceName: "errorTextFieldBackground")
+            self.nameToEmailConstraint.constant = 14
+            self.nameErrorLabel.alpha = 1
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                self.nameTextFieldView.background = #imageLiteral(resourceName: "textFieldBackground")
+                self.nameToEmailConstraint.constant = 10
+                self.nameErrorLabel.alpha = 0
+            }
         }
-        else if nameFieldChecker == false && passwordFieldChecker == false && emailFieldChecker == true{
-            let alert = UIAlertController(title: "Не все поля заполнены!", message: "Пожалуйста, заполните поля Ваше имя и Ваш пароль", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+        if emailFieldChecker == false {
+            self.emailTextFieldView.background = #imageLiteral(resourceName: "errorTextFieldBackground")
+            self.emailToPasswordConstraint.constant = 14
+            self.emailErrorLabel.alpha = 1
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                self.emailTextFieldView.background = #imageLiteral(resourceName: "textFieldBackground")
+                self.emailToPasswordConstraint.constant = 10
+                self.emailErrorLabel.alpha = 0
+            }
         }
-        else if nameFieldChecker == false && passwordFieldChecker == true && emailFieldChecker == false {
-            let alert = UIAlertController(title: "Не все поля заполнены!", message: "Пожалуйста, заполните поля Ваше имя и Ваш электронный адрес", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
-        else if nameFieldChecker == true && passwordFieldChecker == false && emailFieldChecker == false {
-            let alert = UIAlertController(title: "Не все поля заполнены!", message: "Пожалуйста, заполните поля Ваш пароль и Ваш электронный адрес", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
-        else if nameFieldChecker == false && passwordFieldChecker == true && emailFieldChecker == true {
-            let alert = UIAlertController(title: "Не все поля заполнены!", message: "Пожалуйста, заполните поле Ваше имя", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
-        else if nameFieldChecker == true && passwordFieldChecker == false && emailFieldChecker == true {
-            let alert = UIAlertController(title: "Не все поля заполнены!", message: "Пожалуйста, заполните поле Ваш пароль", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
-        else if nameFieldChecker == true && passwordFieldChecker == true && emailFieldChecker == false {
-            let alert = UIAlertController(title: "Не все поля заполнены!", message: "Пожалуйста, заполните поле Ваш электронный адрес", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+        if passwordFieldChecker == false {
+            self.passwordTextFieldView.background = #imageLiteral(resourceName: "errorTextFieldBackground")
+            self.passwordToButtonConstraint.constant = 14
+            self.passwordErrorLabel.alpha = 1
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                self.passwordTextFieldView.background = #imageLiteral(resourceName: "textFieldBackground")
+                self.passwordToButtonConstraint.constant = 10
+                self.passwordErrorLabel.alpha = 0
+            }
         }
     }
     func createAccount() {
