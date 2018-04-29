@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '25B7A5FC731FD02E73C0A453D9CC0A57'
+               BlueprintIdentifier = '14BFB3073B5A5FD55A858C32773B279A'
                BlueprintName = 'Pods-LFU-Quest'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods-LFU-Quest.framework'>

@@ -493,7 +493,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Tg-vO-Wpi">
-                                                <rect key="frame" x="317" y="17" width="43" height="20"/>
+                                                <rect key="frame" x="317" y="16.5" width="43" height="20.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="43" id="hNo-y2-rWM"/>
                                                 </constraints>
@@ -533,7 +533,7 @@
                                                 </state>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXW-K5-xxB">
-                                                <rect key="frame" x="317" y="17" width="43" height="20"/>
+                                                <rect key="frame" x="317" y="16.5" width="43" height="20.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="43" id="Y55-YQ-uLi"/>
                                                 </constraints>
@@ -663,11 +663,10 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="classPickerButton:" destination="O63-Ca-7W6" eventType="touchUpInside" id="mig-zh-m50"/>
-                                                    <action selector="nameChangeButton:" destination="O63-Ca-7W6" eventType="touchUpInside" id="RdI-vb-kW1"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVn-ja-ioI">
-                                                <rect key="frame" x="317" y="16" width="43" height="21"/>
+                                                <rect key="frame" x="317" y="16.5" width="43" height="20.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="43" id="AX9-bN-GGM"/>
                                                 </constraints>
@@ -691,6 +690,7 @@
                                     </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="639" id="4V5-55-9HB"/>
                                     <constraint firstItem="Svy-ue-E8B" firstAttribute="top" secondItem="qWK-XP-2iF" secondAttribute="bottom" id="8cD-12-ur2"/>
                                     <constraint firstItem="tTJ-wJ-W36" firstAttribute="leading" secondItem="qWK-XP-2iF" secondAttribute="leading" id="EAW-RM-mDt"/>
                                     <constraint firstItem="tx1-6f-6oJ" firstAttribute="leading" secondItem="tTJ-wJ-W36" secondAttribute="leading" id="F8u-eA-YWy"/>
@@ -725,7 +725,6 @@
                             <constraint firstItem="ZeT-vs-sMZ" firstAttribute="top" secondItem="GIX-cH-fa0" secondAttribute="top" constant="64" id="LdA-Hx-bO7"/>
                             <constraint firstItem="ZeT-vs-sMZ" firstAttribute="top" secondItem="4gc-mt-42V" secondAttribute="bottom" id="ddx-o6-Jrs"/>
                             <constraint firstItem="ZeT-vs-sMZ" firstAttribute="trailing" secondItem="4gc-mt-42V" secondAttribute="trailing" id="kvf-H2-gbO"/>
-                            <constraint firstItem="ZeT-vs-sMZ" firstAttribute="bottom" secondItem="wp8-U0-W4p" secondAttribute="bottom" constant="85" id="uVN-y5-CYw"/>
                             <constraint firstAttribute="trailing" secondItem="ZeT-vs-sMZ" secondAttribute="trailing" id="z7D-7y-1vk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wp8-U0-W4p"/>

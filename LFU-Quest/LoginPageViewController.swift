@@ -33,6 +33,12 @@ class LoginPageViewController: UIViewController {
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+        emailTextField.background = #imageLiteral(resourceName: "textFieldBackground")
+        emailToPasswordConstraint.constant = 10
+        emailErrorLabel.alpha = 0
+        passwordTextField.background = #imageLiteral(resourceName: "textFieldBackground")
+        passwordToButtonConstraint.constant = 10
+        passwordErrorLabel.alpha = 0
     }
     func clearFieldChecker() {
         let userEmail: String = emailTextField.text!

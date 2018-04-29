@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Hero
+import Spring
+import Firebase
 
 class FeedPageViewController: UIViewController {
     
@@ -174,6 +177,9 @@ class FeedPageViewController: UIViewController {
         scrollView.isUserInteractionEnabled = true
         
         self.scheduleView.frame = CGRect(x: 0, y: 0, width: 375, height: 105)
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        weekDay()
     }
     @objc func scheduleViewTapped() {
         let animator = UIViewPropertyAnimator(duration: 0.4, dampingRatio: 0.7) {
@@ -516,98 +522,398 @@ class FeedPageViewController: UIViewController {
         let date = Date()
         let calendar = Calendar.current
         let weekday = calendar.component(.weekday, from: date)
+        let weekOfYear = calendar.component(.weekOfYear, from: date)
         var dayOfWeek = "День недели"
         
         // MARK: Days of the week
-        if weekday == 2 {
-            dayOfWeek = "Понедельник"
-            self.oneLessonNameLabel.text! = "Русский язык"
-            self.oneLessonRoomLabel.text! = "42"
-            self.twoLessonNameLabel.text! = "Русский язык"
-            self.twoLessonRoomLabel.text! = "42"
-            self.threeLessonNameLabel.text! = "Информатика"
-            self.threeLessonRoomLabel.text! = "78"
-            self.fourLessonNameLabel.text! = "Информатика"
-            self.fourLessonRoomLabel.text! = "78"
-            self.fiveLessonNameLabel.text! = "Физика"
-            self.fiveLessonRoomLabel.text! = "43"
-            self.sixLessonNameLabel.text! = "Физика"
-            self.sixLessonRoomLabel.text! = "43"
-            self.sevenLessonNameLabel.text! = "Электив"
-            self.sevenLessonRoomLabel.text! = "78 / 41"
+        let db = Firestore.firestore()
+        db.collection("users").whereField("userClass", isEqualTo: "Технологический").getDocuments { (snapshot, error) in
+            if error != nil {
+                print(error)
+            } else {
+                for document in (snapshot?.documents)! {
+                    if weekday == 2 {
+                        dayOfWeek = "Понедельник"
+                        self.oneLessonNameLabel.text! = "Русский язык"
+                        self.oneLessonRoomLabel.text! = "42"
+                        self.twoLessonNameLabel.text! = "Русский язык"
+                        self.twoLessonRoomLabel.text! = "42"
+                        self.threeLessonNameLabel.text! = "Информатика"
+                        self.threeLessonRoomLabel.text! = "78"
+                        self.fourLessonNameLabel.text! = "Информатика"
+                        self.fourLessonRoomLabel.text! = "78"
+                        self.fiveLessonNameLabel.text! = "Физика"
+                        self.fiveLessonRoomLabel.text! = "43"
+                        self.sixLessonNameLabel.text! = "Физика"
+                        self.sixLessonRoomLabel.text! = "43"
+                        self.sevenLessonNameLabel.text! = "Электив"
+                        self.sevenLessonRoomLabel.text! = "78 / 41"
+                    }
+                    else if weekday == 3 {
+                        dayOfWeek = "Вторник"
+                        self.oneLessonNameLabel.text! = "Алгебра"
+                        self.oneLessonRoomLabel.text! = "44"
+                        self.twoLessonNameLabel.text! = "Алгебра"
+                        self.twoLessonRoomLabel.text! = "45"
+                        self.threeLessonNameLabel.text! = "Алгебра"
+                        self.threeLessonRoomLabel.text! = "45"
+                        self.fourLessonNameLabel.text! = "Литература"
+                        self.fourLessonRoomLabel.text! = "42"
+                        self.fiveLessonNameLabel.text! = "Обществознание"
+                        self.fiveLessonRoomLabel.text! = "43"
+                        self.sixLessonNameLabel.text! = "Обществознание"
+                        self.sixLessonRoomLabel.text! = "43"
+                        self.sevenLessonNameLabel.text! = "География"
+                        self.sevenLessonRoomLabel.text! = "41"
+                    }
+                    else if weekday == 4 {
+                        dayOfWeek = "Среда"
+                        self.oneLessonNameLabel.text! = "Физкультура"
+                        self.oneLessonTimeLabel.text! = "8:30 - 9:15"
+                        self.oneLessonRoomLabel.text! = "Спортзал"
+                        self.twoLessonNameLabel.text! = "Физкультура"
+                        self.twoLessonTimeLabel.text! = "9:25 - 10:10"
+                        self.twoLessonRoomLabel.text! = "Спортзал"
+                        self.threeLessonNameLabel.text! = "История"
+                        self.threeLessonRoomLabel.text! = "41"
+                        self.fourLessonNameLabel.text! = "История"
+                        self.fourLessonRoomLabel.text! = "41"
+                        self.fiveLessonNameLabel.text! = "Английский язык"
+                        self.fiveLessonRoomLabel.text! = "45"
+                        self.sixLessonNameLabel.text! = "Алгебра"
+                        self.sixLessonRoomLabel.text! = "45"
+                        self.sevenLessonNameLabel.text! = "Английский язык"
+                        self.sevenLessonRoomLabel.text! = "42"
+                    }
+                    else if weekday == 5 {
+                        dayOfWeek = "Четверг"
+                        self.oneLessonNameLabel.text! = "Информатика"
+                        self.oneLessonRoomLabel.text! = "78"
+                        self.twoLessonNameLabel.text! = "Информатика"
+                        self.twoLessonRoomLabel.text! = "78"
+                        self.threeLessonNameLabel.text! = "Физика"
+                        self.threeLessonRoomLabel.text! = "43"
+                        self.fourLessonNameLabel.text! = "Физика"
+                        self.fourLessonRoomLabel.text! = "43"
+                        self.fiveLessonNameLabel.text! = "Английский язык"
+                        self.fiveLessonRoomLabel.text! = "42"
+                        self.sixLessonNameLabel.text! = "Физика"
+                        self.sixLessonRoomLabel.text! = "43"
+                        self.sevenLessonNameLabel.text! = "Электив"
+                        self.sevenLessonRoomLabel.text! = "43"
+                    }
+                    else if weekday == 6 {
+                        dayOfWeek = "Пятница"
+                        self.oneLessonNameLabel.text! = "Литература"
+                        self.oneLessonRoomLabel.text! = "42"
+                        self.twoLessonNameLabel.text! = "Литература"
+                        self.twoLessonRoomLabel.text! = "42"
+                        self.threeLessonNameLabel.text! = "ОБЖ"
+                        self.threeLessonRoomLabel.text! = "43"
+                        self.fourLessonNameLabel.text! = "Геометрия"
+                        self.fourLessonRoomLabel.text! = "44"
+                        self.fiveLessonNameLabel.text! = "Геометрия"
+                        self.fiveLessonRoomLabel.text! = "44"
+                    }
+                    else if weekday == 7 {
+                        dayOfWeek = "Суббота"
+                    }
+                    else if weekday == 1 {
+                        dayOfWeek = "Воскресенье"
+                    }
+                    self.scheduleDayLabel.text! = dayOfWeek
+                }
+            }
         }
-        else if weekday == 3 {
-            dayOfWeek = "Вторник"
-            self.oneLessonNameLabel.text! = "Алгебра"
-            self.oneLessonRoomLabel.text! = "44"
-            self.twoLessonNameLabel.text! = "Алгебра"
-            self.twoLessonRoomLabel.text! = "45"
-            self.threeLessonNameLabel.text! = "Алгебра"
-            self.threeLessonRoomLabel.text! = "45"
-            self.fourLessonNameLabel.text! = "Литература"
-            self.fourLessonRoomLabel.text! = "42"
-            self.fiveLessonNameLabel.text! = "Обществознание"
-            self.fiveLessonRoomLabel.text! = "43"
-            self.sixLessonNameLabel.text! = "Обществознание"
-            self.sixLessonRoomLabel.text! = "43"
-            self.sevenLessonNameLabel.text! = "География"
-            self.sevenLessonRoomLabel.text! = "41"
+        db.collection("users").whereField("userClass", isEqualTo: "Экономический").getDocuments { (snapshot, error) in
+            if error != nil {
+                print(error)
+            } else {
+                for document in (snapshot?.documents)! {
+                    if weekOfYear % 2 == 0 {
+                        if weekday == 2 {
+                            dayOfWeek = "Понедельник"
+                            self.oneLessonNameLabel.text! = "Английский язык"
+                            self.oneLessonRoomLabel.text! = "45"
+                            self.twoLessonNameLabel.text! = "Английский язык"
+                            self.twoLessonRoomLabel.text! = "45"
+                            self.threeLessonNameLabel.text! = "Русский язык"
+                            self.threeLessonRoomLabel.text! = "42"
+                            self.fourLessonNameLabel.text! = "Русский язык"
+                            self.fourLessonRoomLabel.text! = "42"
+                            self.fiveLessonNameLabel.text! = "Биология"
+                            self.fiveLessonRoomLabel.text! = "44"
+                            self.sixLessonNameLabel.text! = "Литература"
+                            self.sixLessonRoomLabel.text! = "44"
+                            self.sevenLessonNameLabel.text! = "Литература"
+                            self.sevenLessonRoomLabel.text! = "44"
+                        }
+                        else if weekday == 3 {
+                            dayOfWeek = "Вторник"
+                            self.oneLessonNameLabel.text! = "Алгебра"
+                            self.oneLessonRoomLabel.text! = "44"
+                            self.twoLessonNameLabel.text! = "Обществознание"
+                            self.twoLessonRoomLabel.text! = "44"
+                            self.threeLessonNameLabel.text! = "Обществознание"
+                            self.threeLessonRoomLabel.text! = "44"
+                            self.fourLessonNameLabel.text! = "Обществознание"
+                            self.fourLessonRoomLabel.text! = "42"
+                            self.fiveLessonNameLabel.text! = "Английский язык"
+                            self.fiveLessonRoomLabel.text! = "45"
+                            self.sixLessonNameLabel.text! = "География"
+                            self.sixLessonRoomLabel.text! = "44"
+                            self.sevenLessonNameLabel.text! = "Алгебра"
+                            self.sevenLessonRoomLabel.text! = "44"
+                        }
+                        else if weekday == 4 {
+                            dayOfWeek = "Среда"
+                            self.oneLessonNameLabel.text! = "Физкультура"
+                            self.oneLessonTimeLabel.text! = "8:30 - 9:15"
+                            self.oneLessonRoomLabel.text! = "Спортзал"
+                            self.twoLessonNameLabel.text! = "Физкультура"
+                            self.twoLessonTimeLabel.text! = "9:25 - 10:10"
+                            self.twoLessonRoomLabel.text! = "Спортзал"
+                            self.threeLessonNameLabel.text! = "Английский язык"
+                            self.threeLessonRoomLabel.text! = "45"
+                            self.fourLessonNameLabel.text! = "Алгебра"
+                            self.fourLessonRoomLabel.text! = "44"
+                            self.fiveLessonNameLabel.text! = "Алгебра"
+                            self.fiveLessonRoomLabel.text! = "44"
+                            self.sixLessonNameLabel.text! = "Литература"
+                            self.sixLessonRoomLabel.text! = "44"
+                            self.sevenLessonNameLabel.text! = "История"
+                            self.sevenLessonRoomLabel.text! = "44"
+                        }
+                        else if weekday == 5 {
+                            dayOfWeek = "Четверг"
+                            self.oneLessonNameLabel.text! = "Геометрия"
+                            self.oneLessonRoomLabel.text! = "44"
+                            self.twoLessonNameLabel.text! = "Геометрия"
+                            self.twoLessonRoomLabel.text! = "44"
+                            self.threeLessonNameLabel.text! = "Английский язык"
+                            self.threeLessonRoomLabel.text! = "45"
+                            self.fourLessonNameLabel.text! = "Обществознание"
+                            self.fourLessonRoomLabel.text! = "42"
+                            self.fiveLessonNameLabel.text! = "География"
+                            self.fiveLessonRoomLabel.text! = "45"
+                            self.sixLessonNameLabel.text! = "География"
+                            self.sixLessonRoomLabel.text! = "45"
+                            self.sevenLessonNameLabel.text! = "История"
+                            self.sevenLessonRoomLabel.text! = "44"
+                        }
+                        else if weekday == 6 {
+                            dayOfWeek = "Пятница"
+                            self.oneLessonNameLabel.text! = "ОБЖ"
+                            self.oneLessonRoomLabel.text! = "44"
+                            self.twoLessonNameLabel.text! = "Экономика"
+                            self.twoLessonRoomLabel.text! = "44"
+                            self.threeLessonNameLabel.text! = "Экономика"
+                            self.threeLessonRoomLabel.text! = "44"
+                            self.fourLessonNameLabel.text! = "Маркетинг"
+                            self.fourLessonRoomLabel.text! = "45"
+                            self.fiveLessonNameLabel.text! = "Экономика на Английском"
+                            self.fiveLessonRoomLabel.text! = "42"
+                        }
+                        else if weekday == 7 {
+                            dayOfWeek = "Суббота"
+                        }
+                        else if weekday == 1 {
+                            dayOfWeek = "Воскресенье"
+                        }
+                        self.scheduleDayLabel.text! = dayOfWeek
+                    }
+                    else {
+                        if weekday == 2 {
+                            dayOfWeek = "Понедельник"
+                            self.oneLessonNameLabel.text! = "Алгебра"
+                            self.oneLessonRoomLabel.text! = "44"
+                            self.twoLessonNameLabel.text! = "Алгебра"
+                            self.twoLessonRoomLabel.text! = "44"
+                            self.threeLessonNameLabel.text! = "Русский язык"
+                            self.threeLessonRoomLabel.text! = "42"
+                            self.fourLessonNameLabel.text! = "Русский язык"
+                            self.fourLessonRoomLabel.text! = "42"
+                            self.fiveLessonNameLabel.text! = "Биология"
+                            self.fiveLessonRoomLabel.text! = "44"
+                            self.sixLessonNameLabel.text! = "Литература"
+                            self.sixLessonRoomLabel.text! = "44"
+                            self.sevenLessonNameLabel.text! = "Литература"
+                            self.sevenLessonRoomLabel.text! = "44"
+                        }
+                        else if weekday == 3 {
+                            dayOfWeek = "Вторник"
+                            self.oneLessonNameLabel.text! = "Алгебра"
+                            self.oneLessonRoomLabel.text! = "44"
+                            self.twoLessonNameLabel.text! = "Обществознание"
+                            self.twoLessonRoomLabel.text! = "44"
+                            self.threeLessonNameLabel.text! = "Обществознание"
+                            self.threeLessonRoomLabel.text! = "44"
+                            self.fourLessonNameLabel.text! = "География"
+                            self.fourLessonRoomLabel.text! = "45"
+                            self.fiveLessonNameLabel.text! = "Алгебра"
+                            self.fiveLessonRoomLabel.text! = "44"
+                            self.sixLessonNameLabel.text! = "География"
+                            self.sixLessonRoomLabel.text! = "44"
+                            self.sevenLessonNameLabel.text! = "Английский язык"
+                            self.sevenLessonRoomLabel.text! = "42"
+                        }
+                        else if weekday == 4 {
+                            dayOfWeek = "Среда"
+                            self.oneLessonNameLabel.text! = "Физкультура"
+                            self.oneLessonTimeLabel.text! = "8:30 - 9:15"
+                            self.oneLessonRoomLabel.text! = "Спортзал"
+                            self.twoLessonNameLabel.text! = "Физкультура"
+                            self.twoLessonTimeLabel.text! = "9:25 - 10:10"
+                            self.twoLessonRoomLabel.text! = "Спортзал"
+                            self.threeLessonNameLabel.text! = "Геометрия"
+                            self.threeLessonRoomLabel.text! = "44"
+                            self.fourLessonNameLabel.text! = "Английский язык"
+                            self.fourLessonRoomLabel.text! = "45"
+                            self.fiveLessonNameLabel.text! = "Английский язык"
+                            self.fiveLessonRoomLabel.text! = "42"
+                            self.sixLessonNameLabel.text! = "Литература"
+                            self.sixLessonRoomLabel.text! = "44"
+                            self.sevenLessonNameLabel.text! = "История"
+                            self.sevenLessonRoomLabel.text! = "44"
+                        }
+                        else if weekday == 5 {
+                            dayOfWeek = "Четверг"
+                            self.oneLessonNameLabel.text! = "Английский язык"
+                            self.oneLessonRoomLabel.text! = "45"
+                            self.twoLessonNameLabel.text! = "Английский язык"
+                            self.twoLessonRoomLabel.text! = "45"
+                            self.threeLessonNameLabel.text! = "Геометрия"
+                            self.threeLessonRoomLabel.text! = "44"
+                            self.fourLessonNameLabel.text! = "География"
+                            self.fourLessonRoomLabel.text! = "45"
+                            self.fiveLessonNameLabel.text! = "Обществознание"
+                            self.fiveLessonRoomLabel.text! = "42"
+                            self.sixLessonNameLabel.text! = "Обществознание"
+                            self.sixLessonRoomLabel.text! = "42"
+                            self.sevenLessonNameLabel.text! = "История"
+                            self.sevenLessonRoomLabel.text! = "44"
+                        }
+                        else if weekday == 6 {
+                            dayOfWeek = "Пятница"
+                            self.oneLessonNameLabel.text! = "ОБЖ"
+                            self.oneLessonRoomLabel.text! = "44"
+                            self.twoLessonNameLabel.text! = "Экономика"
+                            self.twoLessonRoomLabel.text! = "44"
+                            self.threeLessonNameLabel.text! = "Экономика"
+                            self.threeLessonRoomLabel.text! = "44"
+                            self.fourLessonNameLabel.text! = "Маркетинг"
+                            self.fourLessonRoomLabel.text! = "45"
+                            self.fiveLessonNameLabel.text! = "Экономика на Английском"
+                            self.fiveLessonRoomLabel.text! = "42"
+                        }
+                        else if weekday == 7 {
+                            dayOfWeek = "Суббота"
+                        }
+                        else if weekday == 1 {
+                            dayOfWeek = "Воскресенье"
+                        }
+                        self.scheduleDayLabel.text! = dayOfWeek
+                    }
+                }
+            }
         }
-        else if weekday == 4 {
-            dayOfWeek = "Среда"
-            self.oneLessonNameLabel.text! = "Физкультура"
-            self.oneLessonTimeLabel.text! = "8:30 - 9:15"
-            self.oneLessonRoomLabel.text! = "Спортзал"
-            self.twoLessonNameLabel.text! = "Физкультура"
-            self.twoLessonTimeLabel.text! = "9:25 - 10:10"
-            self.twoLessonRoomLabel.text! = "Спортзал"
-            self.threeLessonNameLabel.text! = "История"
-            self.threeLessonRoomLabel.text! = "41"
-            self.fourLessonNameLabel.text! = "История"
-            self.fourLessonRoomLabel.text! = "41"
-            self.fiveLessonNameLabel.text! = "Английский язык"
-            self.fiveLessonRoomLabel.text! = "45"
-            self.sixLessonNameLabel.text! = "Алгебра"
-            self.sixLessonRoomLabel.text! = "45"
-            self.sevenLessonNameLabel.text! = "Английский язык"
-            self.sevenLessonRoomLabel.text! = "42"
+        db.collection("users").whereField("userClass", isEqualTo: "Гуманитарный").getDocuments { (snapshot, error) in
+            if error != nil {
+                print(error)
+            } else {
+                for document in (snapshot?.documents)! {
+                    if weekday == 2 {
+                        dayOfWeek = "Понедельник"
+                        self.oneLessonNameLabel.text! = "Биология"
+                        self.oneLessonRoomLabel.text! = "43"
+                        self.twoLessonNameLabel.text! = "Информатика"
+                        self.twoLessonRoomLabel.text! = "78"
+                        self.threeLessonNameLabel.text! = "Алгебра"
+                        self.threeLessonRoomLabel.text! = "44"
+                        self.fourLessonNameLabel.text! = "Алгебра"
+                        self.fourLessonRoomLabel.text! = "44"
+                        self.fiveLessonNameLabel.text! = "Русский язык"
+                        self.fiveLessonRoomLabel.text! = "42"
+                        self.sixLessonNameLabel.text! = "Русский язык"
+                        self.sixLessonRoomLabel.text! = "42"
+                        self.sevenLessonNameLabel.text! = "Русский язык"
+                        self.sevenLessonRoomLabel.text! = "42"
+                    }
+                    else if weekday == 3 {
+                        dayOfWeek = "Вторник"
+                        self.oneLessonNameLabel.text! = "Алгебра"
+                        self.oneLessonRoomLabel.text! = "44"
+                        self.twoLessonNameLabel.text! = "Обществознание"
+                        self.twoLessonRoomLabel.text! = "44"
+                        self.threeLessonNameLabel.text! = "Обществознание"
+                        self.threeLessonRoomLabel.text! = "44"
+                        self.fourLessonNameLabel.text! = "Литература"
+                        self.fourLessonRoomLabel.text! = "42"
+                        self.fiveLessonNameLabel.text! = "Английский язык"
+                        self.fiveLessonRoomLabel.text! = "42"
+                        self.sixLessonNameLabel.text! = "Английский язык"
+                        self.sixLessonRoomLabel.text! = "42"
+                        self.sevenLessonNameLabel.text! = "География"
+                        self.sevenLessonRoomLabel.text! = "41"
+                    }
+                    else if weekday == 4 {
+                        dayOfWeek = "Среда"
+                        self.oneLessonNameLabel.text! = "Физкультура"
+                        self.oneLessonTimeLabel.text! = "8:30 - 9:15"
+                        self.oneLessonRoomLabel.text! = "Спортзал"
+                        self.twoLessonNameLabel.text! = "Физкультура"
+                        self.twoLessonTimeLabel.text! = "9:25 - 10:10"
+                        self.twoLessonRoomLabel.text! = "Спортзал"
+                        self.threeLessonNameLabel.text! = "Английский язык"
+                        self.threeLessonRoomLabel.text! = "42"
+                        self.fourLessonNameLabel.text! = "Алгебра"
+                        self.fourLessonRoomLabel.text! = "44"
+                        self.fiveLessonNameLabel.text! = "Алгебра"
+                        self.fiveLessonRoomLabel.text! = "44"
+                        self.sixLessonNameLabel.text! = "История"
+                        self.sixLessonRoomLabel.text! = "42"
+                        self.sevenLessonNameLabel.text! = "История"
+                        self.sevenLessonRoomLabel.text! = "44"
+                    }
+                    else if weekday == 5 {
+                        dayOfWeek = "Четверг"
+                        self.oneLessonNameLabel.text! = "Обществознание"
+                        self.oneLessonRoomLabel.text! = "42"
+                        self.twoLessonNameLabel.text! = "Обществознание"
+                        self.twoLessonRoomLabel.text! = "42"
+                        self.threeLessonNameLabel.text! = "Английский язык"
+                        self.threeLessonRoomLabel.text! = "42"
+                        self.fourLessonNameLabel.text! = "Английский язык"
+                        self.fourLessonRoomLabel.text! = "42"
+                        self.fiveLessonNameLabel.text! = "История"
+                        self.fiveLessonRoomLabel.text! = "44"
+                        self.sixLessonNameLabel.text! = "История"
+                        self.sixLessonRoomLabel.text! = "44"
+                        self.sevenLessonNameLabel.text! = "Электив"
+                        self.sevenLessonRoomLabel.text! = "43"
+                    }
+                    else if weekday == 6 {
+                        dayOfWeek = "Пятница"
+                        self.oneLessonNameLabel.text! = "Литература"
+                        self.oneLessonRoomLabel.text! = "42"
+                        self.twoLessonNameLabel.text! = "Литература"
+                        self.twoLessonRoomLabel.text! = "42"
+                        self.threeLessonNameLabel.text! = "ОБЖ"
+                        self.threeLessonRoomLabel.text! = "43"
+                        self.fourLessonNameLabel.text! = "Маркетинг"
+                        self.fourLessonRoomLabel.text! = "45"
+                        self.fiveLessonNameLabel.text! = "Экономика"
+                        self.fiveLessonRoomLabel.text! = "42"
+                    }
+                    else if weekday == 7 {
+                        dayOfWeek = "Суббота"
+                    }
+                    else if weekday == 1 {
+                        dayOfWeek = "Воскресенье"
+                    }
+                    self.scheduleDayLabel.text! = dayOfWeek
+                }
+            }
         }
-        else if weekday == 5 {
-            dayOfWeek = "Четверг"
-            self.oneLessonNameLabel.text! = "Информатика"
-            self.oneLessonRoomLabel.text! = "78"
-            self.twoLessonNameLabel.text! = "Информатика"
-            self.twoLessonRoomLabel.text! = "78"
-            self.threeLessonNameLabel.text! = "Физика"
-            self.threeLessonRoomLabel.text! = "43"
-            self.fourLessonNameLabel.text! = "Физика"
-            self.fourLessonRoomLabel.text! = "43"
-            self.fiveLessonNameLabel.text! = "Английский язык"
-            self.fiveLessonRoomLabel.text! = "42"
-            self.sixLessonNameLabel.text! = "Физика"
-            self.sixLessonRoomLabel.text! = "43"
-            self.sevenLessonNameLabel.text! = "Электив"
-            self.sevenLessonRoomLabel.text! = "43"
-        }
-        else if weekday == 6 {
-            dayOfWeek = "Пятница"
-            self.oneLessonNameLabel.text! = "Литература"
-            self.oneLessonRoomLabel.text! = "42"
-            self.twoLessonNameLabel.text! = "Литература"
-            self.twoLessonRoomLabel.text! = "42"
-            self.threeLessonNameLabel.text! = "ОБЖ"
-            self.threeLessonRoomLabel.text! = "43"
-            self.fourLessonNameLabel.text! = "Геометрия"
-            self.fourLessonRoomLabel.text! = "44"
-            self.fiveLessonNameLabel.text! = "Геометрия"
-            self.fiveLessonRoomLabel.text! = "44"
-        }
-        else if weekday == 7 {
-            dayOfWeek = "Суббота"
-        }
-        else if weekday == 1 {
-            dayOfWeek = "Воскресенье"
-        }
-        scheduleDayLabel.text! = dayOfWeek
     }
 }

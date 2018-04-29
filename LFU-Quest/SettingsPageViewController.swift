@@ -12,12 +12,69 @@ import Spring
 import Firebase
 
 class SettingsPageViewController: UIViewController {
-
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var classPickerLabel: UILabel!
     @IBAction func classPickerButton(_ sender: Any) {
-        
+        let db = Firestore.firestore()
+        let userUid = Auth.auth().currentUser?.uid
+        let alert = UIAlertController(title: "Выбор класса", message: "Выберите ваш класс", preferredStyle: .alert)
+        let tenTech = UIAlertAction(title: "10Б, Технологический", style: .default, handler: { (action) -> Void in
+            db.collection("users").document(userUid!).setData([
+                "userClass": "Технологический",
+                ]) { err in
+                    if let err = err {
+                        print("Error writing document: \(err)")
+                    } else {
+                        print("Document successfully written!")
+                        self.classLabel()
+                    }
+            }
+        })
+        let tenEco = UIAlertAction(title: "10А, Экономический", style: .default, handler: { (action) -> Void in
+            db.collection("users").document(userUid!).setData([
+                "userClass": "Экономический",
+                ]) { err in
+                    if let err = err {
+                        print("Error writing document: \(err)")
+                    } else {
+                        print("Document successfully written!")
+                        self.classLabel()
+                    }
+            }
+        })
+        let tenGum = UIAlertAction(title: "10Б, Гуманитарный", style: .default, handler: { (action) -> Void in
+            db.collection("users").document(userUid!).setData([
+                "userClass": "Гуманитарный",
+                ]) { err in
+                    if let err = err {
+                        print("Error writing document: \(err)")
+                    } else {
+                        print("Document successfully written!")
+                        self.classLabel()
+                    }
+            }
+        })
+        let tenBio = UIAlertAction(title: "10Б, Биологический", style: .default, handler: { (action) -> Void in
+            db.collection("users").document(userUid!).setData([
+                "userClass": "Биологический",
+                ]) { err in
+                    if let err = err {
+                        print("Error writing document: \(err)")
+                    } else {
+                        print("Document successfully written!")
+                        self.classLabel()
+                    }
+            }
+        })
+        let cancel = UIAlertAction(title: "Отмена", style: .destructive, handler: { (action) -> Void in })
+        alert.addAction(tenEco)
+        alert.addAction(tenTech)
+        alert.addAction(tenGum)
+        alert.addAction(tenBio)
+        alert.addAction(cancel)
+        present(alert, animated: true, completion: nil)
     }
     @IBAction func nameChangeButton(_ sender: Any) {
         let alert = UIAlertController(title: "Изменение имени", message: "Введите новое имя!", preferredStyle: .alert)
@@ -61,5 +118,37 @@ class SettingsPageViewController: UIViewController {
         let userEmail = Auth.auth().currentUser?.email
         nameLabel.text! = userName!
         emailLabel.text! = userEmail!
+        classLabel()
+    }
+    func classLabel() {
+        let db = Firestore.firestore()
+        db.collection("users").whereField("userClass", isEqualTo: "Технологический").getDocuments { (snapshot, error) in
+            if error != nil {
+                print(error!)
+            } else {
+                self.classPickerLabel.text! = "Технологический"
+            }
+        }
+        db.collection("users").whereField("userClass", isEqualTo: "Экономический").getDocuments { (snapshot, error) in
+            if error != nil {
+                print(error!)
+            } else {
+                self.classPickerLabel.text! = "Экономический"
+            }
+        }
+        db.collection("users").whereField("userClass", isEqualTo: "Биологический").getDocuments { (snapshot, error) in
+            if error != nil {
+                print(error!)
+            } else {
+                self.classPickerLabel.text! = "Биологический"
+            }
+        }
+        db.collection("users").whereField("userClass", isEqualTo: "Гуманитарный").getDocuments { (snapshot, error) in
+            if error != nil {
+                print(error!)
+            } else {
+                self.classPickerLabel.text! = "Гуманитарный"
+            }
+        }
     }
 }

@@ -36,6 +36,15 @@ class FirstRegViewController: UIViewController, UITextFieldDelegate {
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+        nameTextFieldView.background = #imageLiteral(resourceName: "textFieldBackground")
+        nameToEmailConstraint.constant = 10
+        nameErrorLabel.alpha = 0
+        emailTextFieldView.background = #imageLiteral(resourceName: "textFieldBackground")
+        emailToPasswordConstraint.constant = 10
+        emailErrorLabel.alpha = 0
+        passwordTextFieldView.background = #imageLiteral(resourceName: "textFieldBackground")
+        passwordToButtonConstraint.constant = 10
+        passwordErrorLabel.alpha = 0
     }
     func clearFieldChecker() {
         let userName: String = nameTextFieldView.text!
